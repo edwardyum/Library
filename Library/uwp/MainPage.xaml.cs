@@ -56,14 +56,14 @@ namespace uwp
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            string table = "tasks";
+            //string table = "tasks";
 
-            Dictionary<string, string> condotion = new Dictionary<string, string>();
-            condotion.Add("Id", "2");
+            //Dictionary<string, string> condotion = new Dictionary<string, string>();
+            //condotion.Add("Id", "2");
 
-            List<string> res = SQLite.get(table, condotion);
+            //List<string> res = SQLite.get(table, condotion);
 
-            DateTime dateTime = DateTime.Parse(res[0]);
+            //DateTime dateTime = DateTime.Parse(res[0]);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -82,6 +82,22 @@ namespace uwp
             string value = "4";
 
             SQLite.delete(table, field, value);
+        }
+
+        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            var selectedItem = args.InvokedItemContainer as NavigationViewItem;
+
+            if (selectedItem == null)
+            {
+
+            }
+            else
+            {
+                string selectedItemTag = selectedItem.Tag?.ToString() ?? "Settings";
+                Type pageType = PagesList.choose_page(selectedItemTag);
+                contentFrame.Navigate(pageType);
+            }
         }
     }
 }

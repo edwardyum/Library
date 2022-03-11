@@ -9639,11 +9639,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\e.yumagulov\\Desktop\\системы\\library\\Library\\uwp\\uwp.csproj",
+      "projectUniqueName": "C:\\Users\\e.yumagulov\\Desktop\\системы\\Library\\Library\\uwp\\uwp.csproj",
       "projectName": "uwp",
-      "projectPath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\library\\Library\\uwp\\uwp.csproj",
+      "projectPath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\Library\\Library\\uwp\\uwp.csproj",
       "packagesPath": "C:\\Users\\e.yumagulov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\library\\Library\\uwp\\obj\\",
+      "outputPath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\Library\\Library\\uwp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9665,8 +9665,8 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\e.yumagulov\\Desktop\\системы\\library\\Library\\Library\\Library.csproj": {
-              "projectPath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\library\\Library\\Library\\Library.csproj"
+            "C:\\Users\\e.yumagulov\\Desktop\\системы\\Library\\Library\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\Library\\Library\\Library\\Library.csproj"
             }
           }
         }

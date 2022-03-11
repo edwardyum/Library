@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,6 @@ using Windows.Storage;
 
 namespace Library
 {
-
-
-    // ПЕРЕНЕСТИ КЛАСС SQLite ИЗ ПРОГРАММЫ - ТАМ НАКОПИЛОСЬ УЖЕ МНОГО ИЗМЕНЕНИЙ
-
 
     public static class SQLite
     {
@@ -23,7 +20,7 @@ namespace Library
 
         public static void template(string table, Dictionary<string, string> values)   // шаблон
         {
-            string mes = "при попытке обновить данные в базе данных";
+            string mes = $"при попытке обновить данные в базе данных";
 
             if (check_access(mes))
             {
@@ -121,9 +118,9 @@ namespace Library
             }
         }
 
-        public static int add(string table, Dictionary<string, string> values)   // добавление данных в таблицу
+        public static string add(string table, Dictionary<string, string> values)   // добавление данных в таблицу
         {
-            int id_row = 0;
+            string id_row = string.Empty;
 
             string mes = "при попытке добавить данные в базу данных";
 
@@ -139,7 +136,7 @@ namespace Library
 
                     Tuple<string, string> strings = fields_values_strings_for_row(values);
 
-                    string sql = $"INSERT INTO {table} ({strings.Item1}) VALUES ({strings.Item2});" +
+                    string sql = $"INSERT INTO {table} ({strings.Item1}) VALUES ({strings.Item2}); " +
                                  $"SELECT last_insert_rowid();";
 
                     command.CommandText = sql;
@@ -147,7 +144,8 @@ namespace Library
                     try
                     {
                         SqliteDataReader reader = command.ExecuteReader();
-                        id_row = reader.GetInt32(0);                      
+                        reader.Read();
+                        id_row = reader.GetString(0);
                     }
                     catch (Exception ex)
                     {
@@ -160,8 +158,6 @@ namespace Library
 
             return id_row;
         }
-        
-
 
 
         private static Tuple<string, string> fields_values_strings_for_row(Dictionary<string, string> fields)
@@ -200,54 +196,131 @@ namespace Library
             return strings;
         }
 
-
-        public static List<string> get(string table, Dictionary<string, string> where)   // получить данные из базы данных
+        public static List<string> get_subtasks_id(string id)   // получить данные из базы данных
         {
-            List<string> entries = new List<string>();
+            List<string> subtasks_id = new List<string>();
 
-            string mes = "при попытке получить данные из базы данных";
+            string mes = $"при попытке получить id подзадач из таблицы ...";
 
-            if (path != null)
+            if (check_access(mes))
             {
-                if (File.Exists(path))
+                using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
                 {
-                    using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+                    db.Open();
+
+                    //string sql = $"SELECT {} FROM {} WHERE {}={id}";
+                    string sql = $"example";
+
+                    SqliteCommand command = new SqliteCommand(sql, db);
+
+                    try
                     {
-                        db.Open();
+                        SqliteDataReader reader = command.ExecuteReader();
 
-                        string sql = $"SELECT * FROM {table} WHERE {where.ElementAt(0).Key}={where.ElementAt(0).Value}";
-
-                        SqliteCommand command = new SqliteCommand(sql, db);
-
-                        try
-                        {
-                            SqliteDataReader reader = command.ExecuteReader();
-
-                            while (reader.Read())
-                            {
-                                entries.Add(reader.GetString(1));
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
-                        }
-
-                        db.Close();
+                        while (reader.Read())
+                            subtasks_id.Add(reader.GetString(0));
                     }
+                    catch (Exception ex)
+                    {
+                        string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+                    }
+
+                    db.Close();
                 }
-                else
-                {
-                    string message = $"{mes} обнаружено, что программа не может найти файл базы данных по указанному пути: {path}";
-                }
-            }
-            else
-            {
-                string message = $"{mes} обнаружено, что строка указывающая путь к базе данных = null";
             }
 
-            return entries;
+            return subtasks_id;
         }
+
+        // МЕТОД ПРЕОБРАЗОВАТЬ В ПРИМЕР ПОЛУЧЕНИЯ ДАННЫХ (ЧТЕНИЯ) ИЗ БАЗЫ ДАННЫХ
+
+        //public static ObservableCollection<Objective> get_subtasks(string id)   // получить данные из базы данных
+        //{
+        //    ObservableCollection<Objective> tasks = new ObservableCollection<Objective>();
+
+        //    string mes = "при попытке получить данные из базы данных";
+
+        //    if (check_access(mes))
+        //    {
+        //        using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+        //        {
+        //            db.Open();
+
+        //            string sql = $"SELECT * FROM {Tables.tasks}, {Tables.hierarchy} WHERE {Tables.hierarchy}.{Hierachy.parent} = {id} " +
+        //            $"AND {Tables.tasks}.{Tasks.Id}={Tables.hierarchy}.{Hierachy.child}";
+
+        //            SqliteCommand command = new SqliteCommand(sql, db);
+
+        //            try
+        //            {
+        //                SqliteDataReader reader = command.ExecuteReader();
+
+        //                while (reader.Read())
+        //                {
+        //                    int c = 0;
+
+        //                    Objective task = new Objective(reader.GetString(0));
+        //                    task.obtaining_data_from_db = true;
+
+        //                    c = reader.GetOrdinal(Tasks.creation_date); task.DataCreation = reader.GetString(c);
+        //                    c = reader.GetOrdinal(Tasks.name); task.Name = reader.GetString(c);
+        //                    c = reader.GetOrdinal(Tasks.description); if (!reader.IsDBNull(c)) task.Description = reader.GetString(c);
+        //                    c = reader.GetOrdinal(Tasks.done); if (!reader.IsDBNull(c)) task.Done = reader.GetBoolean(c);
+        //                    c = reader.GetOrdinal(Tasks.completion_date); if (!reader.IsDBNull(c)) task.DataCompletion = reader.GetString(c);
+
+        //                    task.obtaining_data_from_db = false;
+        //                    tasks.Add(task);
+        //                }
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+        //            }
+
+        //            db.Close();
+        //        }
+        //    }
+
+        //    return tasks;
+        //}
+
+
+        public static List<string> get_tasks_for_today()
+        {
+            List<string> tasks = new List<string>();
+
+            string mes = "при попытке получить данные о задачах на сегодня";
+
+            if (check_access(mes))
+            {
+                using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+                {
+                    db.Open();
+
+                    //string sql = $"SELECT {Planner.task} FROM {Tables.planner} WHERE {Planner.date} = '{Time.now_date()}'";
+                    string sql = $"example";
+
+                    SqliteCommand command = new SqliteCommand(sql, db);
+
+                    try
+                    {
+                        SqliteDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                            tasks.Add(reader.GetString(0));
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+                    }
+
+                    db.Close();
+                }
+            }
+
+            return tasks;
+        }
+
 
 
         public static void update(string table, Dictionary<string, string> values, Dictionary<string, string> where)
@@ -282,7 +355,7 @@ namespace Library
                 }
             }
         }
-        
+
         private static string field_value_string_for_update_row(Dictionary<string, string> fields)
         {
             // в этот метод следует отправлять словарь с названиями полей и значениями для них, которые были проверены на существование и соответствие их типам
@@ -327,7 +400,40 @@ namespace Library
 
                     try
                     {
-                        command.ExecuteReader();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+                    }
+
+                    db.Close();
+                }
+            }
+        }
+
+        public static void delete_task_from_today(string id)   // удаление задачи из списка на сегодня
+        {
+            string mes = "при попытке обновить данные в базе данных";
+
+            if (check_access(mes))
+            {
+                using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+                {
+                    db.Open();
+
+                    SqliteCommand command = new SqliteCommand();
+
+                    command.Connection = db;
+
+                    //string sql = $"DELETE FROM {Tables.planner} WHERE {Planner.task} = '{id}' AND {Planner.date} = '{Time.now_date()}'";
+                    string sql = $"example";
+
+                    command.CommandText = sql;
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
                     }
                     catch (Exception ex)
                     {

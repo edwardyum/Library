@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>266fb51b-675f-4dcc-8112-88593e6b6385</PackageIdentityName>
     <PackageIdentityPublisher>CN=e.yumagulov</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>F52792A4975EBE36C13DA58966AE3D25C6B62A136E1C77D9FAA0C1FE68929C14</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>D599B56EAB8CCA1E84F05C01E9D981A9E16F0E51FB75BD51D8BB11524BA17268</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>266fb51b-675f-4dcc-8112-88593e6b6385_1.0.0.0_x64__2wpxf91wdknyr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>266fb51b-675f-4dcc-8112-88593e6b6385_2wpxf91wdknyr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>266fb51b-675f-4dcc-8112-88593e6b6385</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-02T07:59:06.498</Modified>
+      <Modified>2022-03-11T18:08:27.795</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\uwp.exe">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\uwp.exe">
       <PackagePath>entrypoint\uwp.exe</PackagePath>
-      <Modified>2022-03-02T07:59:05.876</Modified>
+      <Modified>2022-03-11T18:08:26.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\microsoft.data.sqlite.core\6.0.2\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -70,63 +70,71 @@
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2018-09-18T19:38:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\bin\Debug\Library.dll">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\Library\bin\Debug\Library.dll">
       <PackagePath>Library.dll</PackagePath>
-      <Modified>2022-03-02T07:59:02.678</Modified>
+      <Modified>2022-03-11T18:07:49.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T01:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-02-28T12:52:37.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2021-12-03T12:10:08.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-12-03T12:10:08.542</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-12-03T12:10:08.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-12-03T12:10:08.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-12-03T12:10:08.544</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-12-03T12:10:08.544</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-12-03T12:10:08.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\uwp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\uwp.xr.xml">
       <PackagePath>uwp.xr.xml</PackagePath>
-      <Modified>2022-03-01T12:33:52.449</Modified>
+      <Modified>2022-03-11T18:08:26.745</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-02T07:59:05.815</Modified>
+      <Modified>2022-03-11T18:08:26.755</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\ImagePage.xbf">
+      <PackagePath>Pages\ImagePage.xbf</PackagePath>
+      <Modified>2022-03-11T18:08:26.755</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-02T07:59:05.815</Modified>
+      <Modified>2022-03-11T18:08:26.755</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\Settings.xbf">
+      <PackagePath>Pages\Settings.xbf</PackagePath>
+      <Modified>2022-03-11T18:08:26.755</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -136,13 +144,13 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-01T23:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-02T07:55:37.524</Modified>
+      <Modified>2022-03-11T18:08:27.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\Core\uwp.exe">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Core\uwp.exe">
       <PackagePath>uwp.exe</PackagePath>
-      <Modified>2022-03-02T07:59:06.493</Modified>
+      <Modified>2022-03-11T18:08:27.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

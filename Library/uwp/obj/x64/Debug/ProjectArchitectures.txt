@@ -1,2 +1,2 @@
-C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\Library.csproj;neutral
-C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\uwp.csproj;x64
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\Library\Library.csproj;neutral
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\uwp.csproj;x64

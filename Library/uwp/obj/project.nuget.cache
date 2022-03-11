@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pa3OfuGR5jyVwBoe4S4+4RrnU8/Coz5u8v66JuuIVjsvhNgMfMaF1PksV2zjKu/h+g+2hAjtUggTELWXnHxatA==",
+  "dgSpecHash": "GuvDP9JuBMIgAPiaoC2FHvb1bp4bxfVLQHtSpecrfi6BuPZIuW46MREcNV52fAunsYIzXLD3LGFfN0dKbZz/zA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\library\\Library\\uwp\\uwp.csproj",
+  "projectFilePath": "C:\\Users\\e.yumagulov\\Desktop\\системы\\Library\\Library\\uwp\\uwp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\e.yumagulov\\.nuget\\packages\\microsoft.data.sqlite\\6.0.2\\microsoft.data.sqlite.6.0.2.nupkg.sha512",
     "C:\\Users\\e.yumagulov\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.2\\microsoft.data.sqlite.core.6.0.2.nupkg.sha512",

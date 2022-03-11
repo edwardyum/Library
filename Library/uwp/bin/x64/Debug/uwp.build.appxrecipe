@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>266fb51b-675f-4dcc-8112-88593e6b6385</PackageIdentityName>
     <PackageIdentityPublisher>CN=e.yumagulov</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\uwp.exe">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\uwp.exe">
       <PackagePath>entrypoint\uwp.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\microsoft.data.sqlite.core\6.0.2\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
@@ -52,50 +52,56 @@
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\bin\Debug\Library.dll">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\Library\bin\Debug\Library.dll">
       <PackagePath>Library.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\uwp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\uwp.xr.xml">
       <PackagePath>uwp.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\ImagePage.xbf">
+      <PackagePath>Pages\ImagePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\Settings.xbf">
+      <PackagePath>Pages\Settings.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -103,10 +109,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\library\Library\uwp\bin\x64\Debug\Core\uwp.exe">
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Core\uwp.exe">
       <PackagePath>uwp.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
