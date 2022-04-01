@@ -120,6 +120,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Empty.cs" />
     <Compile Include="Picture.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

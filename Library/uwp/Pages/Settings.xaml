@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock  Text="Страница настроек" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button Content="можете нажать эту кнопку ([хоть ничего и не произойдёт)" HorizontalAlignment="Center" />
-    </Grid>
+    <RelativePanel>
+        <TextBlock x:Name="TextBlock1" Text="Страница настроек" TextWrapping="Wrap" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+        <Button x:Name="Button" Content="можете нажать эту кнопку (хоть ничего и не произойдёт)" RelativePanel.Below="TextBlock1" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+    </RelativePanel>
 </Page>

@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="uwp.SQLitePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <Button x:Name="Button" Content="инициализировать базу данных" Click="Button_Click" Width="500"/>
+        <Button x:Name="Button1" Content="проверить доступность базы данных" Click="Button_Click_1" RelativePanel.Below="Button" Width="500"/>
+        <Button x:Name="Button2" Content="создать базу данных" Click="Button_Click_2" RelativePanel.Below="Button1" Width="500"/>
+        <Button x:Name="Button3" Content="сохранить массив байтов в базу данных" Click="Button_Click_3" RelativePanel.Below="Button2" Width="500"/>
+        <Button x:Name="Button4" Content="загрузить массив байтов из базы данных" Click="Button_Click_4" RelativePanel.Below="Button3" Width="500"/>
+        <Button x:Name="Button5" Content="вставить новую строку в базу данных и получить её индекс" Click="Button_Click_5" RelativePanel.Below="Button4" Width="500"/>
+    </RelativePanel>
+</Page>

@@ -44,4 +44,4 @@ C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\obj\Debug\pr
 C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\obj\Debug\qualifiers.txt
 C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\obj\Debug\qualifiers.txt.intermediate
 C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\obj\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\e.yumagulov\Desktop\системы\library\Library\Library\obj\Debug\Library.csproj.AssemblyReference.cache
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\Library\obj\Debug\Library.csproj.AssemblyReference.cache

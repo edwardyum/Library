@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 
 using Library;
+using Windows.UI.Xaml.Media.Imaging;
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace uwp
@@ -29,9 +30,17 @@ namespace uwp
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            Picture.ImageToByteArray("");
+            string path = @"C:\Users\e.yumagulov\AppData\Local\Packages\266fb51b-675f-4dcc-8112-88593e6b6385_2wpxf91wdknyr\LocalState\jpg.jpg";
+
+            byte[] file = await Library.Tools.open(path);
+
+            BitmapImage bitmapImage = await Picture.BytesToBitmapImage(file);
+
+            image1.Source = bitmapImage;
+
+            Library.Tools.bytesToFile("новый файл.jpg", file);
         }
     }
 }

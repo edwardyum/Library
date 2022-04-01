@@ -103,6 +103,12 @@
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\Settings.xbf">
       <PackagePath>Pages\Settings.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\ToolsPage.xbf">
+      <PackagePath>Pages\ToolsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\SQLitePage.xbf">
+      <PackagePath>Pages\SQLitePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
     </AppxPackagedFile>

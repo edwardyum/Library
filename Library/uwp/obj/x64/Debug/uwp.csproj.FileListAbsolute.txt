@@ -127,3 +127,13 @@ C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pa
 C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\Settings.g.cs
 C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\Settings.xaml
 C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\Settings.xbf
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\ToolsPage.xbf
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\ToolsPage.g.i.cs
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\ToolsPage.g.cs
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\ToolsPage.xaml
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\ToolsPage.xbf
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\SQLitePage.xbf
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\SQLitePage.g.i.cs
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\SQLitePage.g.cs
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\SQLitePage.xaml
+C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\obj\x64\Debug\Pages\SQLitePage.xbf

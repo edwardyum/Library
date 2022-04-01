@@ -29,7 +29,6 @@ namespace uwp
         public MainPage()
         {
             this.InitializeComponent();
-            SQLite.initialize();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,13 @@ using Windows.Storage;
 namespace Library
 {
 
+    // ОПИСАНИЕ
+    // не сомтря на то, что класс статический и методы статические подумал, что лучше один раз инициализировать основные переменные и дальше их использовать, чем каждый раз передавать в метод организационные параметры
+
     public static class SQLite
     {
-        private static string db_name = "db.db";
+        private static readonly string db_name_default = "db.db";
+        private static string db_name = db_name_default;
         private static string path_to_folder;
         private static string path;                 // полный путь к базе данных
 
@@ -29,7 +34,6 @@ namespace Library
                     db.Open();
 
                     SqliteCommand command = new SqliteCommand();
-
                     command.Connection = db;
 
                     string correspondence = field_value_string_for_update_row(values);
@@ -45,13 +49,15 @@ namespace Library
                     {
                         string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
                     }
-
-                    db.Close();
+                    finally
+                    {
+                        db.Close();
+                    }
                 }
             }
         }
 
-        private static bool check_access(string mes = null)
+        public static bool check_access(string mes = null)
         {
             bool access = true;
 
@@ -82,17 +88,32 @@ namespace Library
             return true;
         }
 
-
-
-        public static void initialize()
+        private static string name_DB(string name_of_db = null)
         {
-            path_to_folder = Tools.get_local_folder();
-            path = Path.Combine(path_to_folder, db_name);
+            // подход в настоящем методе и позволяет статически обращаться к базе данных с параметрами отличными от инициализированных
+
+            string name_for_db = db_name;
+            if (!string.IsNullOrWhiteSpace(name_of_db))
+                name_for_db = name_of_db;
+
+            return name_for_db;
         }
 
-        public async static void create_db()
+        public static void initialize(string name_of_db = null)
         {
-            await ApplicationData.Current.LocalFolder.CreateFileAsync(db_name, CreationCollisionOption.OpenIfExists);
+            path_to_folder = Tools.get_local_folder();
+
+            if (!string.IsNullOrWhiteSpace(name_of_db))
+                db_name = name_of_db;
+            else
+                db_name = db_name_default;
+
+            path = Path.Combine(path_to_folder, db_name);
+        }        
+
+        public async static void create_db(string name_of_db = null)
+        {
+            await ApplicationData.Current.LocalFolder.CreateFileAsync(name_DB(name_of_db), CreationCollisionOption.OpenIfExists);
         }
 
         // не проработано
@@ -118,7 +139,83 @@ namespace Library
             }
         }
 
-        public static string add(string table, Dictionary<string, string> values)   // добавление данных в таблицу
+        public static void insert_bytes(string table, string field, byte[] bytes)   // вставка массива байтов в базу данных через параметры
+        {
+            string mes = $"при попытке обновить данные в базе данных";
+
+            if (check_access(mes))
+            {
+                using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+                {
+                    db.Open();
+
+                    SqliteCommand command = new SqliteCommand();
+                    command.Connection = db;
+
+                    command.CommandText = $"INSERT INTO {table} ({field}) VALUES(@parameter)";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.Add(new SqliteParameter("@parameter", bytes));
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+                    }
+
+                    db.Close();
+                }
+            }
+        }
+
+
+
+        public static List<byte[]> download_bytes(string table, string field, string where, string condition)   // загрузка массива байтов из базы данных
+        {
+            List<byte[]> bytes = new List<byte[]>();
+
+            string mes = $"при попытке загрузить данные из базы данных";
+
+
+            if (string.IsNullOrWhiteSpace(table) || string.IsNullOrWhiteSpace(field) || string.IsNullOrWhiteSpace(where) || string.IsNullOrWhiteSpace(condition))
+            {
+                string message = $"{mes} проверка входящего параметра показала, что он пуст";
+            }
+
+            if (check_access(mes))
+            {
+                using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+                {
+                    db.Open();
+
+                    string sql = $"SELECT {field} FROM {table} WHERE {where} = '{condition}'";
+
+                    SqliteCommand command = new SqliteCommand(sql, db);
+
+                    try
+                    {
+                        SqliteDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                            bytes.Add((byte[])reader[$"{field}"]);
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+                    }
+                    finally
+                    {
+                        db.Close();
+                    }
+                }
+            }
+
+            return bytes;
+        }
+
+        public static string add(string table, Dictionary<string, string> values)   // добавление данных в таблицу с получением индекса вставленной строки
         {
             string id_row = string.Empty;
 
@@ -131,7 +228,6 @@ namespace Library
                     db.Open();
 
                     SqliteCommand command = new SqliteCommand();
-
                     command.Connection = db;
 
                     Tuple<string, string> strings = fields_values_strings_for_row(values);
@@ -151,8 +247,10 @@ namespace Library
                     {
                         string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
                     }
-
-                    db.Close();
+                    finally
+                    {
+                        db.Close();
+                    }
                 }
             }
 
@@ -194,6 +292,65 @@ namespace Library
             Tuple<string, string> strings = new Tuple<string, string>(f, v);
 
             return strings;
+        }
+
+        public static string addp(string table, Dictionary<string, string> values)   // добавление данных в таблицу через параметры с получением индекса вставленной строки
+        {
+            string id = string.Empty;
+
+            string mes = $"при попытке обновить данные в базе данных";
+
+            if (check_access(mes))
+            {
+                using (SqliteConnection db = new SqliteConnection($"Filename={path}"))
+                {
+                    db.Open();
+
+                    SqliteCommand command = new SqliteCommand();
+                    command.Connection = db;
+
+                    string fields = string.Empty;
+                    string parameters = string.Empty;
+
+                    int k = 1;
+                    foreach (var item in values)
+                    {
+                        fields += item.Key + ", ";
+
+                        string parameter = $"@parameter{k}";
+                        parameters += parameter + ", ";
+
+                        command.Parameters.Add(new SqliteParameter(parameter, item.Value));
+                        k++;
+                    }
+
+                    fields = fields.Remove(fields.Length - 1); fields = fields.Remove(fields.Length - 1);
+                    parameters = parameters.Remove(parameters.Length - 1); parameters = parameters.Remove(parameters.Length - 1);
+
+
+                    command.CommandText = $"INSERT INTO {table} ({fields}) VALUES({parameters}); " +
+                                          $"SELECT last_insert_rowid();";
+
+                    command.CommandType = CommandType.Text;
+
+                    try
+                    {
+                        SqliteDataReader reader = command.ExecuteReader();
+                        reader.Read();
+                        id = reader.GetString(0);
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = $"{mes} база данных вернула следующую ошибку: {ex.Message}";
+                    }
+                    finally
+                    {
+                        db.Close();
+                    }
+                }
+            }
+
+            return id;
         }
 
         public static List<string> get_subtasks_id(string id)   // получить данные из базы данных
@@ -444,6 +601,8 @@ namespace Library
                 }
             }
         }
+
+        
 
 
     }
