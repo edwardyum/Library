@@ -18,7 +18,7 @@ namespace uwp
             BitmapImage image = new BitmapImage();
             using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
             {
-                await stream.WriteAsync(bytes.AsBuffer());
+                await stream.WriteAsync(bytes.AsBuffer()); // для добавления AsBuffer добавить using System.Runtime.InteropServices.WindowsRuntime;
                 stream.Seek(0);
                 await image.SetSourceAsync(stream);
             }

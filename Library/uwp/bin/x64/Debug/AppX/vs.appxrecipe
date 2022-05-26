@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-24T13:10:06.925</Modified>
+      <Modified>2022-04-27T09:12:57.796</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\uwp.exe">
       <PackagePath>entrypoint\uwp.exe</PackagePath>
-      <Modified>2022-03-24T13:10:05.928</Modified>
+      <Modified>2022-04-27T09:12:56.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\microsoft.data.sqlite.core\6.0.2\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -72,7 +72,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\Library\bin\Debug\Library.dll">
       <PackagePath>Library.dll</PackagePath>
-      <Modified>2022-03-24T13:10:01.583</Modified>
+      <Modified>2022-04-27T09:12:52.036</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -122,27 +122,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-24T13:10:05.844</Modified>
+      <Modified>2022-04-27T09:12:56.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\ImagePage.xbf">
       <PackagePath>Pages\ImagePage.xbf</PackagePath>
-      <Modified>2022-03-24T13:10:05.844</Modified>
+      <Modified>2022-04-27T09:12:56.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-24T13:10:05.844</Modified>
+      <Modified>2022-04-27T09:12:56.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\Settings.xbf">
       <PackagePath>Pages\Settings.xbf</PackagePath>
-      <Modified>2022-03-24T13:10:05.845</Modified>
+      <Modified>2022-04-27T09:12:56.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\ToolsPage.xbf">
       <PackagePath>Pages\ToolsPage.xbf</PackagePath>
-      <Modified>2022-03-24T13:10:05.845</Modified>
+      <Modified>2022-04-27T09:12:56.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Pages\SQLitePage.xbf">
       <PackagePath>Pages\SQLitePage.xbf</PackagePath>
-      <Modified>2022-03-24T13:10:05.845</Modified>
+      <Modified>2022-04-27T09:12:56.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -154,11 +154,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-24T13:10:06.185</Modified>
+      <Modified>2022-04-27T09:12:57.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\Desktop\системы\Library\Library\uwp\bin\x64\Debug\Core\uwp.exe">
       <PackagePath>uwp.exe</PackagePath>
-      <Modified>2022-03-24T13:10:06.919</Modified>
+      <Modified>2022-04-27T09:12:57.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\e.yumagulov\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
